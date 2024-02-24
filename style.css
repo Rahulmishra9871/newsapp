@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav{
+    width: 100%;
+    background-color: #7fffd4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    padding: 20px;
+    margin-inline: auto;
+}
+
+.nav-part1 img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.nav-part2 ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-part2 ul li{
+    margin: 0 1.4rem;
+    padding: 1.5rem 0.5rem;
+    position: relative;
+    display: inline;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+
+.nav-items a:hover{
+    scale: 1.2;
+}
+
+.nav-items a::after{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    
+    transition: all 0.3s ease-in-out;
+}
+.nav-part2 ul li a:hover::after{
+    width: 100%;
+}
+
+/* .active{
+    color:red;
+    background-color: black;
+} */
+.nav-part3 input{
+    /* height: 60px; */
+    padding: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+.nav-part3 button{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-part3 button:hover{
+    background-color: white;
+    color: blue;
+}
+
+main{
+    padding: 20px;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.card-head img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card-content h3, .card-content h6, .card-content p{
+    margin-bottom: 5px;
+}

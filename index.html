@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-part1" onclick="reload()">
+          <img src="Logo.png" alt="" />
+        </div>
+        <div class="nav-part2">
+          <ul>
+            <li
+              class="nav-items"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              <a href="#">Finance</a>
+            </li>
+            <li
+              class="nav-items"
+              id="sports"
+              onclick="onNavItemClick('sports')"
+            >
+              <a href="#">Sports</a>
+            </li>
+            <li
+              class="nav-items"
+              id="entertainment"
+              onclick="onNavItemClick('entertainment')"
+            >
+              <a href="#">Entertainment</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-part3">
+          <input
+            type="text"
+            name="searchbar"
+            id="searchText"
+            placeholder="e.g. Science"
+          />
+          <button id="search-btn">Search</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card" style="background-color: gray">
+        <div class="card-head">
+          <img src="Colorful Live News Free Logo.png" alt="" id="news-image" />
+        </div>
+        <div class="card-content">
+          <h3 class="news-title" id="news-title">Posted:23/02/2024</h3>
+          <h6 class="news-source" id="news-source">BBc News</h6>
+          <p class="news-text" id="news-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            excepturi cum architecto beatae voluptatibus vel autem ipsa minus
+            repudiandae iste!
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
